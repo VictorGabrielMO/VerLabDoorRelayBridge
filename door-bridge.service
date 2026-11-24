@@ -1,0 +1,17 @@
+[Unit]
+Description=Authenticated bridge to the existing door relay
+After=network.target
+[Service]
+Type=simple
+User=door-bridge
+Group=door-bridge
+ExecStart=/usr/bin/python3 /opt/door-bridge/bridge.py --config /etc/door-bridge/config.json
+Restart=on-failure
+RestartSec=3
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+[Install]
+WantedBy=multi-user.target

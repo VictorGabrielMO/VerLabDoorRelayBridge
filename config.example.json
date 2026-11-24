@@ -1,0 +1,14 @@
+{
+  "door_id": "verlab-entrance",
+  "bind": "127.0.0.1",
+  "port": 9080,
+  "token_file": "/etc/door-bridge/token",
+  "dry_run": true,
+  "cooldown_seconds": 5,
+  "relay_timeout_seconds": 3,
+  "relay_python": "/usr/bin/python2.7",
+  "relay_config": "/var/doorsystem/config/config.json",
+  "allowed_ips": [
+    "127.0.0.1"
+  ]
+}
